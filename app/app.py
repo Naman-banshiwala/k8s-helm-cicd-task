@@ -11,7 +11,7 @@ def health():
 def demo():
     return jsonify(
         message=os.getenv("APP_MESSAGE", "Hello from AWS EKS!"),
-        version=os.getenv("APP_VERSION", "v1")
+        version=os.getenv("APP_VERSION", "v2")
     ), 200
 
 if __name__ == "__main__":
