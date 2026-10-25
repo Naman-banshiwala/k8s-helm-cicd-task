@@ -1,0 +1,6 @@
+apiVersion: v2
+name: microservice
+description: Helm chart for the demo Flask microservice on Amazon EKS
+type: application
+version: 0.1.0
+appVersion: "v1"
