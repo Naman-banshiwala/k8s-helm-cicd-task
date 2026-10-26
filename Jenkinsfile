@@ -118,7 +118,7 @@ pipeline {
                     helm upgrade --install "$HELM_RELEASE" "$HELM_CHART" \
                       --kubeconfig "$KUBECONFIG" \
                       --namespace "$K8S_NAMESPACE" \
-                      --set replicaCount=1 \
+                      --set autoscaling.enabled=true \
                       --set image.repository="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPOSITORY}" \
                       --set-string image.tag="$IMAGE_TAG" \
                       --wait \
